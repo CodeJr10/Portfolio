@@ -3,5 +3,5 @@ Just starting...
 Some features I plan on applying
 
 - Animated Onjects
-- Gradient Svgs
+- Gradient Svg
 - Carousel Slider or Block Components
