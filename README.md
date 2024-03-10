@@ -6,4 +6,4 @@ Some features I plan on applying
 - Gradient Svg
 - Carousel Slider or Block Components
 - Links to LinkedIn/Github/Leetcode/Hackerank
-- Contact Info
+- Contact Infos
