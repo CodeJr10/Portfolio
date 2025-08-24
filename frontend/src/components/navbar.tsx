@@ -1,6 +1,6 @@
 // import React from "react";
 
-import Logo from "../assets/Logo.svg";
+import Logo from "../assets/logo.svg";
 import download from "../assets/download_icon.svg";
 import { useState } from "react";
 
@@ -21,17 +21,6 @@ const Navbar = () => {
           </a>
           {/* Buttons */}
           <div className="flex md:order-2 space-x-3 rtl:space-x-reverse">
-            <button
-              type="button"
-              className=" hidden md:flex items-center gap-2 text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
-           focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-3 text-center dark:bg-white
-              dark:border-white
-              dark:hover:bg-gray-300 dark:focus:ring-blue-800"
-            >
-              Resume{" "}
-              <img src={download} alt="Download Icon" width={15} height={15} />
-            </button>
-
             {/* hamburger menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -94,9 +83,15 @@ const Navbar = () => {
               <li>
                 <a
                   href=""
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hidden md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Resume
+                  <img
+                    src={download}
+                    alt="Download Icon"
+                    width={15}
+                    height={15}
+                  />
                 </a>
               </li>
             </ul>
