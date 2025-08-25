@@ -4,67 +4,50 @@ import Logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="fixed w-full z-20 top-0 start-0 dark:border-gray-600">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="/"
-            className=" hidden md:flex items-center space-x-3 rtl:space-x-reverse "
-          >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              <img src={Logo} alt="CodeJr10 Logo" width={200} height={200} />
-            </span>
-          </a>
+    <nav className="fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+      <div className="max-w-screen-xl mx-auto p-4 md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-1">
+        <a
+          href="/"
+          className=" hidden md:flex items-center space-x-3 rtl:space-x-reverse "
+        >
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <img src={Logo} alt="CodeJr10 Logo" width={100} height={100} />
+          </span>
+        </a>
 
-          {/* line divider */}
-          <div className="hidden md:block border-t border-gray-200 w-full mx-3"></div>
+        {/* line divider */}
+        <div className="hidden md:block border-t border-gray-200 md:mx-6 opacity-30"></div>
 
-          {/*  Nav Links */}
-          <div
-            className={`items-center justify-center w-full md:flex md:w-auto md:order-1`}
-            id="navbar-sticky"
+        {/*  Nav Links */}
+        <div
+          className="flex items-center justify-center md:justify-end"
+          id="navbar-sticky"
+        >
+          <ul
+            className="flex fixed bottom-5 left-1/2 -translate-x-1/2 
+               items-center justify-center 
+               p-2 md:p-0 
+               font-medium text-sm border border-gray-100 rounded-lg bg-gray-50 
+               md:relative md:bottom-auto md:left-auto md:translate-x-0 md:border-0 md:bg-transparent md:space-x-2 md:px-2 md:py-2
+               dark:bg-[#080930] md:dark:bg-[#080930] zA"
           >
-            <ul
-              className="flex fixed bottom-5 left-1/2 -translate-x-1/2 items-center justify-center p-4 md:flex md:flex-row md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:static md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#080930]
-            md:dark:bg-gray-900 dark:border-gray-700 "
-            >
-              <li>
+            {["About", "Projects", "Contact", "Resume"].map((item) => (
+              <li key={item}>
                 <a
-                  href=""
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded-sm 
+                     hover:bg-gray-100 md:hover:text-blue-700 
+                     dark:text-white dark:hover:bg-gray-700 dark:hover:text-white 
+                     transition-all duration-300 ease-in" // 👈 smooth hover
                 >
-                  About
+                  {item}
                 </a>
               </li>
-              <li>
-                <a
-                  href=""
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  className="py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
