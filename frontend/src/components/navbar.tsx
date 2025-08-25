@@ -9,12 +9,15 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse "
+            className=" hidden md:flex items-center space-x-3 rtl:space-x-reverse "
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               <img src={Logo} alt="CodeJr10 Logo" width={200} height={200} />
             </span>
           </a>
+
+          {/* line divider */}
+          <div className="hidden md:block border-t border-gray-200 w-full mx-3"></div>
 
           {/*  Nav Links */}
           <div
@@ -22,7 +25,7 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul
-              className="flex fixed bottom-5 items-center justify-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-[#080930]
+              className="flex fixed bottom-5 left-1/2 -translate-x-1/2 items-center justify-center p-4 md:flex md:flex-row md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:static md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#080930]
             md:dark:bg-gray-900 dark:border-gray-700 "
             >
               <li>
