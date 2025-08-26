@@ -1,1 +1,62 @@
-@import "tailwindcss";
+.min-vh-100 {
+  min-height: 100vh;
+}
+.bw2 {
+  border-width: 0.25rem;
+}
+.bt {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+@media (max-width: 620px) {
+  body {
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-size: 18px;
+  }
+}
+body {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+
+  /* 👇 Gradient now always applied */
+  background-color: #050736;
+  background-image: radial-gradient(
+      at 12% 26%,
+      rgb(10, 27, 80) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 48% 55%, hsl(202, 78%, 17%) 0px, transparent 50%),
+    radial-gradient(at 28% 95%, hsl(273, 65%, 17%) 0px, transparent 50%),
+    radial-gradient(at 42% 60%, hsl(180, 70%, 17%) 0px, transparent 50%),
+    radial-gradient(at 62% 19%, hsl(289, 81%, 17%) 0px, transparent 50%),
+    radial-gradient(at 79% 79%, hsl(233, 71%, 17%) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  nav a,
+  .new-nav a,
+  .main,
+  footer a {
+    color: hsl(246, 100%, 94%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #050736;
+    background-image: radial-gradient(
+        at 12% 26%,
+        rgb(10, 27, 80) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 48% 55%, hsl(202, 78%, 17%) 0px, transparent 50%),
+      radial-gradient(at 28% 95%, hsl(273, 65%, 17%) 0px, transparent 50%),
+      radial-gradient(at 42% 60%, hsl(180, 70%, 17%) 0px, transparent 50%),
+      radial-gradient(at 62% 19%, hsl(289, 81%, 17%) 0px, transparent 50%),
+      radial-gradient(at 79% 79%, hsl(233, 71%, 17%) 0px, transparent 50%);
+  }
+}
