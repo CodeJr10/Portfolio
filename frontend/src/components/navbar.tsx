@@ -4,7 +4,7 @@ import Logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+    <nav className="w-full z-20 top-0 start-0 dark:border-gray-600 h-16 md:h-20">
       <div className="max-w-screen-xl mx-auto p-4 md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-1">
         <a
           href="/"
