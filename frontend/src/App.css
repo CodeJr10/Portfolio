@@ -62,3 +62,52 @@ body {
       radial-gradient(at 79% 79%, hsl(233, 71%, 17%) 0px, transparent 50%); */
   }
 }
+
+/* About Section */
+
+.banner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .product {
+  /* background-color: red; */
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  z-index: 1;
+  --left: -15px;
+}
+
+.banner .product .soda {
+  background:
+    var(--url) var(--left) 0,
+    url(assets/mockup.png);
+  background-size: auto 100%;
+  width: 280px;
+  aspect-ratio: 2/4;
+  background-blend-mode: multiply;
+  mask-image: url(assets/mockup.png);
+  mask-size: auto 100%;
+  transition: 0.7s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner .product:hover .soda {
+  --left: -960px;
+  transform: translateX(-50%) translateY(-120px) scale(0.8);
+}
+
+.banner .product .soda:nth-child(2) {
+  opacity: 0;
+}
+
+.banner .product:hover .soda:nth-child(2) {
+  opacity: 1;
+}
