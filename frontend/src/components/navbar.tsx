@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/*  Nav Links */}
         <div
-          className="flex items-center justify-center md:justify-end"
+          className="flex items-center justify-center md:justify-end border-1 border-gray-500"
           id="navbar-sticky"
         >
           <ul
